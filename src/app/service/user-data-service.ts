@@ -13,5 +13,8 @@ export class UserDataService {
  }
   addData(data: object) {
     console.table(data);
-    }   
+  }
+  getData(): Observable<object> {
+    return this.user$
+  }   
 }

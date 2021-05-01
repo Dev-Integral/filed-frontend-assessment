@@ -10,9 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { userReducer } from './store/user.reducer'
 import { UserDataService } from './service/user-data-service';
+import { DetailPageComponent } from './pages/detail-page.component';
+import { HomeComponent } from './pages/home.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
