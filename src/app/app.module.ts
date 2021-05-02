@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { userReducer } from './store/user.reducer'
+import { counterReducer } from './store/user.reducer'
 import { UserDataService } from './service/user-data-service';
 import { DetailPageComponent } from './pages/detail-page.component';
 import { HomeComponent } from './pages/home.component';
@@ -17,7 +17,7 @@ import { HomeComponent } from './pages/home.component';
   declarations: [
     AppComponent,
     DetailPageComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,7 @@ import { HomeComponent } from './pages/home.component';
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
     BrowserAnimationsModule,
     StoreModule.forRoot({
-      user: userReducer
+      count: counterReducer
     })
   ],
   providers: [UserDataService],
