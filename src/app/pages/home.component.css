@@ -1,3 +1,37 @@
-form {
-    padding: 50px;
+.logo{
+    top: 130px;
+    left: 174px;
+    width: 158px;
+    height: 54px;
+}
+.context-one h3{
+    font-size: 44px;
+}
+.blue-text{
+    color: #38CCF5;
+}
+.form-holder{
+    display: flex;
+    flex-direction: row;
+  
+    justify-content: center;
+}
+.screenshot{
+    width: 30%;
+    height: 30%;
+}
+form{
+    padding: 30px;
+    background: #FBFBFB 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 20px #00000029;
+    border-radius: 30px;
+    
+}
+.form-head{
+    text-align: center;
+    font-size: 34px;
+    font-family: Roboto sans-serif;
+}
+.footer img{
+    width: 100%;
 }

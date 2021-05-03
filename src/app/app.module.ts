@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
-import { FormlyMaterialModule } from '@ngx-formly/material';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,7 @@ import { HomeComponent } from './pages/home.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormlyMaterialModule,
+    FormlyBootstrapModule,
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
     BrowserAnimationsModule,
     StoreModule.forRoot({
