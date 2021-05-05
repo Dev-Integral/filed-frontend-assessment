@@ -4,8 +4,15 @@
     width: 158px;
     height: 54px;
 }
-.context-one h3{
-    font-size: 44px;
+.content-one h2{
+    padding: 0;
+    margin-bottom: 20px;
+}
+.content-one .small-text{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: Roboto sans-serif;
+    margin-bottom: 50px;
 }
 .blue-text{
     color: #38CCF5;
@@ -13,25 +20,59 @@
 .form-holder{
     display: flex;
     flex-direction: row;
-  
     justify-content: center;
 }
+.ellipse-holder{
+    width: 5%;
+    transform: rotate(-120deg);
+    float: right;
+    padding-right: 70px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 5;
+    top: -10px;
+    top: -120px;
+    right: 100px;
+}
+.grouped-ellipse-image{
+    margin-top: 75px;
+    margin-right: 120px;
+}
 .screenshot{
-    width: 30%;
-    height: 30%;
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: -100px;
+}
+.ellipse-4{
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    width: 70%;
+    height: 70%;
 }
 form{
-    padding: 30px;
     background: #FBFBFB 0% 0% no-repeat padding-box;
     box-shadow: 0px 4px 20px #00000029;
     border-radius: 30px;
-    
+    position: relative;
+    bottom: 300px;
 }
 .form-head{
     text-align: center;
     font-size: 34px;
     font-family: Roboto sans-serif;
 }
+.container{
+    padding: 0 50px;
+}
 .footer img{
     width: 100%;
+}
+.Bgx{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -1,21 +1,29 @@
 <div class="over-all">
-  <header>
+  <header class="container">
     <img src="assets/images/filed-logo-01.png" class="logp" />
   </header>
 
-  <div class="form-holder">
+  <div class="form-holder container">
     <div class="context-one">
-      <h2>Book a demo today and</h2> 
-      <h2>get two weeks for <span class="blue-text">free</span>. Why?</h2>
-      <p>Because Our AI-Powered Software will Exceed Your Marketing goals</p>
-      <p>
-        <img src="assets/images/Grid.svg" class="form-grid">
-      </p>
-      <p>
-        <img src="assets/images/screenshot.png" class="screenshot">
-      </p>
+
+      <h2>Book a demo today and<br />get two weeks for <span class="blue-text">free</span>. Why?</h2>
+      <p class="small-text">Because Our AI-Powered Software<br /> will Exceed Your Marketing goals</p>
+      <div class="grouped-ellipse-image">
+      <p class="ellipse-holder">
+        <span><img class="ellipse-three" src="assets/images/ellipse-one.svg" /></span>
+        <span><img class="ellipse-two" src="assets/images/ellipse-two.svg" /></span>
+        <span><img class="ellipse-one" src="assets/images/ellipse-three.svg" /></span>
+        </p>
+        <p>
+          <img src="assets/images/Grid.svg" class="form-grid">
+        </p>
+        <p>
+          <img src="assets/images/screenshot.png" class="screenshot">
+        </p>
+      </div>
     </div>
     <div>
+      <span><img class="ellipse-4" src="assets/images/ellipse-four.svg" /></span>
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <h3 class="form-head">We'll be in touch to get your trial setup.</h3>
         <p>Fill out form</p>
@@ -24,29 +32,28 @@
       </form>
     </div>
   </div>
-  <button (click)="increment()">Increment</button>
-
-  <div>Current Count: {{ count$ | async }}</div>
-
-  <button (click)="decrement()">Decrement</button>
-
-  <button (click)="reset()">Reset Counter</button>
+  
   <footer class="footer">
     <img src="assets/images/footer-full.svg" />
   </footer>
   <section>
-    <div class="cont">
+    <div class="Bgx container">
       <p>
         The Benefits of using Filed
       </p>
       <div>
-        <img src="assets/images/check-icon.svg"><span>Ability to scale using Dexter, our AI-powered marketing
-          genius</span>
-        <img src="assets/images/check-icon.svg"><span>Client Success Manager who will optimize your Facebook ad
-          campaignsw and focus on driving the best possible results for you.</span>
-        <img src="assets/images/check-icon.svg"><span>This is limited time offer only.</span>
+        <p>
+          <img src="assets/images/check-icon.svg"><span>Ability to scale using Dexter, our AI-powered marketing
+            genius</span>
+        </p>
+        <p>
+          <img src="assets/images/check-icon.svg"><span>Client Success Manager who will optimize your Facebook ad<br />
+            campaigns and focus on driving the best possible results for you.</span>
+        </p>
+        <p>
+          <img src="assets/images/check-icon.svg"><span>This is limited time offer only.</span>
+        </p>
       </div>
-
     </div>
   </section>
 </div>

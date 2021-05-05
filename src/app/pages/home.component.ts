@@ -4,7 +4,12 @@ import { Store } from '@ngrx/store';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 import { Observable } from 'rxjs';
 import { UserDataService } from '../service/user-data-service';
-import { decrement, increment, reset } from '../store/action';
+//import { decrement, increment, reset } from '../store/action';
+import { ToastrService } from 'ngx-toastr';
+
+interface AppState {
+    
+}
 
 @Component({
     selector: 'home',
@@ -13,12 +18,16 @@ import { decrement, increment, reset } from '../store/action';
 })
 
 export class HomeComponent {
-    count$: Observable<number>;
+    
+    user$: Observable<object>
     constructor(
-        private store: Store<{count: number}>,
-        private userDataService: UserDataService
+        private store: Store<{user: object}>,
+        private userDataService: UserDataService,
+        private toastr: ToastrService
         ) {    
-            this.count$ = store.select('count');
+            
+            this.user$ = this.store.select('user')
+            
          }
     form = new FormGroup({});
     model = {};
@@ -70,22 +79,24 @@ export class HomeComponent {
         }
     ];
 
-    increment() {
-        this.store.dispatch(increment());
-        this.count$.subscribe(data => {console.log(data)});
-      }
+    // increment() {
+    //     this.store.dispatch(increment());
+    //     this.count$.subscribe(data => {console.log(data)});
+    //   }
      
-      decrement() {
-        this.store.dispatch(decrement());
-        console.log(this.count$.subscribe(data => {console.log(data)}));
-      }
+    //   decrement() {
+    //     this.store.dispatch(decrement());
+    //     console.log(this.count$.subscribe(data => {console.log(data)}));
+    //   }
      
-      reset() {
-        this.store.dispatch(reset());
-        console.log(this.count$.subscribe(data => {console.log(data)}));
-      }
+    //   reset() {
+    //     this.store.dispatch(reset());
+    //     console.log(this.count$.subscribe(data => {console.log(data)}));
+    //   }
 
     onSubmit() {
-        this.userDataService.addData(this.model);
+        typeof this.user$;
+        this.userDataService.postData(this.model);
+        typeof this.user$;
     }
 }

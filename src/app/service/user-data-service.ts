@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { POST_DATA } from '../store/Useraction';
 
 
 @Injectable()
@@ -11,12 +12,15 @@ export class UserDataService {
  constructor(
    private store: Store
    //private http: HttpClient
-  ){
-    
- }
+  ){}
+
+
   addData(data: object) {
     console.table(data);
     console.log(this.store);
+  }
+  postData(data: object) {
+    this.store.dispatch({type: POST_DATA, payload: data});
   }
   getData() {
     return this.user$
