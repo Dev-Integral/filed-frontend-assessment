@@ -98,5 +98,6 @@ export class HomeComponent {
         typeof this.user$;
         this.userDataService.postData(this.model);
         typeof this.user$;
+        this.toastr.success('Form submitted successfully', 'Update!!!');
     }
 }
