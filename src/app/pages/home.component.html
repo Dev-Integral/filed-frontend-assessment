@@ -60,7 +60,7 @@
           </p>
         </div>
         <div>
-          <ngx-intl-tel-input [cssClass]="'custom'" [enableAutoCountrySelect]="true" [enablePlaceholder]="false"
+          <ngx-intl-tel-input [cssClass]="'phoneField'" [enableAutoCountrySelect]="true" [enablePlaceholder]="false"
             [searchCountryFlag]="false" [enableAutoCountrySelect]="true" [selectFirstCountry]="false" [maxLength]="13"
             [phoneValidation]="true" name="phone" formControlName="phone">
           </ngx-intl-tel-input>
@@ -74,25 +74,41 @@
 
   <footer class="footer">
     <h1 class="blue-text">Our Offer: Intelligent Automation. Real-time Insights. Unparalleled Results.</h1>
-    <img src="assets/images/footer-full.svg" />
+    <img src="assets/images/footer-full.svg" class="fitBg" />
   </footer>
-  <section>
+  <section section="section-3">
     <div class="Bgx container">
-      <p>
-        The Benefits of using Filed
-      </p>
+      <h2>
+        The <span class="blue-text">Benefits</span> of using Filed
+      </h2>
       <div>
-        <p>
-          <img src="assets/images/check-icon.svg"><span>Ability to scale using Dexter, our AI-powered marketing
-            genius</span>
-        </p>
-        <p>
-          <img src="assets/images/check-icon.svg"><span>Client Success Manager who will optimize your Facebook ad<br />
-            campaigns and focus on driving the best possible results for you.</span>
-        </p>
-        <p>
-          <img src="assets/images/check-icon.svg"><span>This is limited time offer only.</span>
-        </p>
+        <div class="section-3-text">
+          <img src="assets/images/check-icon.svg">
+          <p>Ability to scale using Dexter, our AI-powered marketing
+            genius
+          </p>
+        </div>  
+        <div class="section-3-text">
+          <img src="assets/images/check-icon.svg">
+          <p>Client Success Manager who will optimize your Facebook ad<br />
+            campaigns and focus on driving the best possible results for you.
+          </p>
+        </div>
+        <div class="section-3-text">
+          <img src="assets/images/check-icon.svg">
+          <p>This is limited time offer only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-4 container">
+    <div class="section-4-context-holder">
+      <div class="section-4-context">
+        <img src="assets/images/format-quote.svg">
+        <h3>
+          It surpassed our expectation
+        </h3>
+        <p></p>
       </div>
     </div>
   </section>

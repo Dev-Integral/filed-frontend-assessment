@@ -1,4 +1,4 @@
-import * as PostActions from './userAction';
+import * as PostActions from './action';
 
 export type Action = PostActions.AllActions;
 

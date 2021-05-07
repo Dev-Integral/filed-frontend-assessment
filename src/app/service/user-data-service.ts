@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { POST_DATA } from '../store/Useraction';
+import { POST_DATA } from '../store/action';
 
 
 @Injectable()
