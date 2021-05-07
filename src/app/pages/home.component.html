@@ -4,46 +4,47 @@
   </header>
 
   <div class="form-holder container">
-    <div class="context-one">
+    <div class="floated">
+      <div class="context-one">
 
-      <h2>Book a demo today and<br />get two weeks for <span class="blue-text">free</span>. Why?</h2>
-      <p class="small-text">Because Our AI-Powered Software<br /> will Exceed Your Marketing goals</p>
-      <div class="grouped-ellipse-image">
-        <p class="ellipse-holder">
-          <span><img class="ellipse-three" src="assets/images/ellipse-one.svg" /></span>
-          <span><img class="ellipse-two" src="assets/images/ellipse-two.svg" /></span>
-          <span><img class="ellipse-one" src="assets/images/ellipse-three.svg" /></span>
-        </p>
-        <p>
-          <img src="assets/images/Grid.svg" class="form-grid">
-        </p>
-        <p>
-          <img src="assets/images/screenshot.png" class="screenshot">
-        </p>
-      </div>
-    </div>
-    <div class="right-pane">
-      <span><img class="ellipse-4" src="assets/images/ellipse-four.svg" /></span>
-      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
-        <h3 class="form-head">We'll be in touch to get your trial setup.</h3>
-        <p>Fill out form</p>
-
-        <div class="form-names">
-          <div class="form-group mr-2">
-            <input type="text" placeholder="First Name*" class="form-control" formControlName="firstName" />
-            <p class="text-danger"
-              *ngIf="(dataFormControl.firstName.touched || submitted) && dataFormControl.firstName.errors?.required">
-              First Name is required!
-            </p>
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Last Name*" class="form-control" formControlName="lastName" />
-            <p class="text-danger"
-              *ngIf="(dataFormControl.lastName.touched || submitted) && dataFormControl.lastName.errors?.required">
-              Last Name is required!
-            </p>
-          </div>
+        <h2>Book a demo today and<br />get two weeks for <span class="blue-text">free</span>. Why?</h2>
+        <p class="small-text">Because Our AI-Powered Software<br /> will Exceed Your Marketing goals</p>
+        <div class="grouped-ellipse-image">
+          <p class="ellipse-holder">
+            <span><img class="ellipse-three" src="assets/images/ellipse-one.svg" /></span>
+            <span><img class="ellipse-two" src="assets/images/ellipse-two.svg" /></span>
+            <span><img class="ellipse-one" src="assets/images/ellipse-three.svg" /></span>
+          </p>
+          <p>
+            <img src="assets/images/Grid.svg" class="form-grid">
+          </p>
+          <p>
+            <img src="assets/images/screenshot.png" class="screenshot">
+          </p>
         </div>
+      </div>
+      <div class="right-pane">
+        <span><img class="ellipse-4" src="assets/images/ellipse-four.svg" /></span>
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+          <h3 class="form-head">We'll be in touch to get your trial setup.</h3>
+          <p>Fill out form</p>
+
+          <div class="form-names">
+            <div class="form-group mr-2">
+              <input type="text" placeholder="First Name*" class="form-control" formControlName="firstName" />
+              <p class="text-danger"
+                *ngIf="(dataFormControl.firstName.touched || submitted) && dataFormControl.firstName.errors?.required">
+                First Name is required!
+              </p>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last Name*" class="form-control" formControlName="lastName" />
+              <p class="text-danger"
+                *ngIf="(dataFormControl.lastName.touched || submitted) && dataFormControl.lastName.errors?.required">
+                Last Name is required!
+              </p>
+            </div>
+          </div>
           <div class="form-group">
             <input type="email" placeholder="Work Email*" class="form-control" formControlName="email" />
             <p class="text-danger"
@@ -51,25 +52,27 @@
               Email is required!
             </p>
           </div>
-        <div class="form-group">
-          <input type="number" placeholder="Monthly Advertising Budget*" class="form-control"
-            formControlName="monthly" />
-          <p class="text-danger"
-            *ngIf="(dataFormControl.monthly.touched || submitted) && dataFormControl.monthly.errors?.required">
-            This field is required!
-          </p>
-        </div>
-        <div>
-          <ngx-intl-tel-input [cssClass]="'phoneField'" [enableAutoCountrySelect]="true" [enablePlaceholder]="false"
-            [searchCountryFlag]="false" [enableAutoCountrySelect]="true" [selectFirstCountry]="false" [maxLength]="13"
-            [phoneValidation]="true" name="phone" formControlName="phone">
-          </ngx-intl-tel-input>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-default">GET FREE TRIAL</button>
-        </div>
-      </form>
+          <div class="form-group">
+            <input type="number" placeholder="Monthly Advertising Budget*" class="form-control"
+              formControlName="monthly" />
+            <p class="text-danger"
+              *ngIf="(dataFormControl.monthly.touched || submitted) && dataFormControl.monthly.errors?.required">
+              This field is required!
+            </p>
+          </div>
+          <div>
+            <ngx-intl-tel-input [cssClass]="'phoneField'" [enableAutoCountrySelect]="true" [enablePlaceholder]="false"
+              [searchCountryFlag]="false" [enableAutoCountrySelect]="true" [selectFirstCountry]="false" [maxLength]="13"
+              [phoneValidation]="true" name="phone" formControlName="phone">
+            </ngx-intl-tel-input>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-default">GET FREE TRIAL</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <button class="btn btn-default view-data-btn" (click)="viewData()" ngs>VIEW STORE</button>
   </div>
 
   <footer class="footer">
@@ -87,7 +90,7 @@
           <p>Ability to scale using Dexter, our AI-powered marketing
             genius
           </p>
-        </div>  
+        </div>
         <div class="section-3-text">
           <img src="assets/images/check-icon.svg">
           <p>Client Success Manager who will optimize your Facebook ad<br />
@@ -101,15 +104,77 @@
       </div>
     </div>
   </section>
-  <section class="section-4 container">
-    <div class="section-4-context-holder">
+  <section class="section-4">
+    <div class="section-4-context-holder container">
       <div class="section-4-context">
-        <img src="assets/images/format-quote.svg">
-        <h3>
-          It surpassed our expectation
-        </h3>
-        <p></p>
+        <div class="sect-4-grp">
+          <img src="assets/images/format-quote.svg">
+          <h3>
+            "It surpassed our<br> expectation"
+          </h3>
+        </div>
+        <p>"Filed has completely surpassed our<br> expectation. I'll refer everyone I know.
+          Filed<br> is worth much more than I paid."
+        </p>
+        <div class="sect-4-grp">
+          <img class="testimony-logo" src="assets/images/my-id.jpg">
+          <h3>
+            <span class="name">Tania Y.</span><br>
+            <span class="email">Flexicontent@hello</span>
+          </h3>
+        </div>
       </div>
+      <div class="section-4-context">
+        <div class="sect-4-grp">
+          <img src="assets/images/format-quote.svg">
+          <h3>
+            "The essential<br> markweting tool"
+          </h3>
+        </div>
+        <p>"Filed is the most valuable business resources<br> we have EVER purchased. I was amazed at the<br>
+          quality of filed. We wwere treated like Royalty."
+        </p>
+        <div class="sect-4-grp">
+          <img class="testimony-logo" src="assets/images/my-id.jpg">
+          <h3>
+            <span class="name">Jack Francis</span><br>
+            <span class="email">Manager @ Accidents</span>
+          </h3>
+        </div>
+      </div>
+      <div class="section-4-context">
+        <div class="sect-4-grp">
+          <img src="assets/images/format-quote.svg">
+          <h3>
+            "Your company is <br>
+            truly upstanding"
+          </h3>
+        </div>
+        <p>"The service was excellent. Aftwer using Filed my<br>
+          skyrocketed! it really saves me time<br>
+          and effert."
+        </p>
+        <div class="sect-4-grp">
+          <img class="testimony-logo" src="assets/images/my-id.jpg">
+          <h3>
+            <span class="name">Dawna N.</span><br>
+            <span class="email">Editor @ Museum of<br> Typoraphy</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-footer">
+    <div class="main-footer-holder container">
+      <p class="reserved">Copyright &copy; 2020. All Rights Reserved.</p>
+      <p>HOME</p>
+      <P>FEATURES</P>
+      <p>TERMS</p>
+      <p>PRIVACY</p>
+      <p>CONTACT US</p>
+      <p><img src="assets/images/facebook1.svg"></p>
+      <p><img src="assets/images/instagram.svg"></p>
+      <p><img src="assets/images/twitter.svg"></p>
     </div>
   </section>
 </div>

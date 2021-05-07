@@ -23,10 +23,11 @@
 .blue-text{
     color: #38CCF5;
 }
-.form-holder{
+.floated{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 0;
 }
 .ellipse-holder{
     width: 5%;
@@ -91,6 +92,13 @@ input[type='tel']{
     color: #fff;
     margin: 20px 0;
 }
+.view-data-btn{
+    background:teal;
+    color: white;
+    width: 20%;
+    position: relative;
+    top: -150px;
+}
 .footer{
     position: relative;
     padding: 100px;
@@ -135,8 +143,72 @@ input[type='tel']{
     margin-right: 10px;
 }
 .section-4{
-    
     width: 100%;
-    background: transparent linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, #42CCF5 16%, #36C1EE 38%, #119FD6 62%, #2A97BF 81%, #108ABF 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    background: transparent 
+    linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, 
+    #42CCF5 16%, #36C1EE 38%, #119FD6 62%, #2A97BF 81%, 
+    #108ABF 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+.section-4-context-holder{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.sect-4-grp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sect-4-grp img{
+    margin-right: 20px;
+    width: 40px;
+    margin-top: 0;
+    position: absolute;
+    top: 5px;
+    
+}
+.sect-4-grp h3{
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: 0;
+}
+.section-4-context p{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.testimony-logo{
+    position: relative;
+    width: 60px;
+    border-radius: 50%;
+
+}
+.name{
+    font-size: 16px;
+}
+.email{
+    font-size: 12px;
+}
+.main-footer{
+    background: #595957 0% 0% no-repeat padding-box;
+    width: 100%;
+}
+.main-footer-holder{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.reserved{
+    margin-right: 60px;
+
 }

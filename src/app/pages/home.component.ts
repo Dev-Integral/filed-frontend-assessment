@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { FormlyFieldConfig } from '@ngx-formly/core';
 import { Observable } from 'rxjs';
 import { UserDataService } from '../service/user-data-service';
-//import { decrement, increment, reset } from '../store/action';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 interface AppState {
@@ -25,7 +24,8 @@ export class HomeComponent {
         private fb: FormBuilder,
         private store: Store<{ user: object }>,
         private userDataService: UserDataService,
-        private toastr: ToastrService
+        private toastr: ToastrService,
+        private router: Router
     ) {
 
         this.user$ = this.store.select('user')
@@ -56,5 +56,11 @@ export class HomeComponent {
             console.log(this.formData);
         }
         null;
+    }
+    viewData(){
+        if(this.user$){
+            console.log(this.user$);
+            this.router.navigate(['detail']);
+        }
     }
 }

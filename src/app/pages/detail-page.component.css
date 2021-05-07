@@ -1,0 +1,214 @@
+.logo{
+    top: 130px;
+    left: 174px;
+    width: 158px;
+    height: 54px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.container{
+    padding: 0 50px;
+}
+.content-one h2{
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+.content-one .small-text{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: Roboto sans-serif;
+    margin-bottom: 50px;
+}
+.blue-text{
+    color: #38CCF5;
+}
+.floated{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.ellipse-holder{
+    width: 5%;
+    transform: rotate(-120deg);
+    float: right;
+    padding-right: 70px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 5;
+    top: -10px;
+    top: -120px;
+    right: 100px;
+}
+.grouped-ellipse-image{
+    margin-top: 75px;
+    margin-right: 120px;
+}
+.screenshot{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: -100px;
+}
+.right-pane{
+    position: relative;
+    bottom: 200px;
+}
+.ellipse-4{
+    position: relative;
+    bottom: 30px;
+    right: 90px;
+    width: 70%;
+    height: 70%;
+}
+form{
+    background: #FBFBFB 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 20px #00000029;
+    border-radius: 30px;
+    position: relative;
+    top: -350px;
+    padding: 50px 30px;
+}
+.form-names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-head{
+    text-align: center;
+    font-size: 34px;
+    font-family: Roboto sans-serif;
+}
+input[type='tel']{
+    border: 1px solid #fff;
+    
+    margin: 20px;
+    width: 100%
+}
+.btn{
+    width: 100%;
+    background: tomato;
+    color: #fff;
+    margin: 20px 0;
+}
+.view-data-btn{
+    background:teal;
+    color: white;
+    width: 20%;
+    position: relative;
+    top: -150px;
+}
+.footer{
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer h1{
+    font-size: 20px;
+}
+.footer .fitBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .7;
+}
+.Bgx{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Bgx h2{
+    font-size: 28px;
+}
+.section-3{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section-3-text{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.section-3-text img{
+    width: 30px;
+    margin-right: 10px;
+}
+.section-4{
+    width: 100%;
+    color: white;
+    background: transparent 
+    linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, 
+    #42CCF5 16%, #36C1EE 38%, #119FD6 62%, #2A97BF 81%, 
+    #108ABF 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.section-4-context-holder{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.sect-4-grp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sect-4-grp img{
+    margin-right: 20px;
+    width: 40px;
+    margin-top: 0;
+    position: absolute;
+    top: 5px;
+    
+}
+.sect-4-grp h3{
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: 0;
+}
+.section-4-context p{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.testimony-logo{
+    position: relative;
+    width: 60px;
+    border-radius: 50%;
+
+}
+.name{
+    font-size: 16px;
+}
+.email{
+    font-size: 12px;
+}
+.main-footer{
+    background: #595957 0% 0% no-repeat padding-box;
+    width: 100%;
+}
+.main-footer-holder{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.reserved{
+    margin-right: 60px;
+
+}
