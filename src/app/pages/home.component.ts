@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 import { Observable } from 'rxjs';
@@ -8,7 +8,7 @@ import { UserDataService } from '../service/user-data-service';
 import { ToastrService } from 'ngx-toastr';
 
 interface AppState {
-    
+
 }
 
 @Component({
@@ -18,86 +18,43 @@ interface AppState {
 })
 
 export class HomeComponent {
-    
+    submitted
     user$: Observable<object>
+    formData: FormGroup;
     constructor(
-        private store: Store<{user: object}>,
+        private fb: FormBuilder,
+        private store: Store<{ user: object }>,
         private userDataService: UserDataService,
         private toastr: ToastrService
-        ) {    
-            
-            this.user$ = this.store.select('user')
-            
-         }
-    form = new FormGroup({});
-    model = {};
-    fields: FormlyFieldConfig[] = [
-        {
-            key: 'firstName',
-            type: 'input',
-            templateOptions: {
-                label: 'First Name',
-                placeholder: 'Enter First Name',
-                required: true,
-            }
-        },
-        {
-            key: 'lastName',
-            type: 'input',
-            templateOptions: {
-                label: 'Last Name',
-                placeholder: 'Enter Last Name',
-                required: true,
-            }
-        },
-        {
-            key: 'email',
-            type: 'input',
-            templateOptions: {
-                label: 'Email address',
-                placeholder: 'Enter email',
-                required: true,
-            }
-        },
-        {
-            key: 'monthly',
-            type: 'input',
-            templateOptions: {
-                label: 'Monthly Budget.',
-                placeholder: 'Monthly Advertising Budget',
-                required: true
-            }
-        },
-        {
-            key: 'phone',
-            type: 'input',
-            templateOptions: {
-                label: 'Phone number',
-                placeholder: 'Enter phone number',
-                required: true
-            }
-        }
-    ];
+    ) {
 
-    // increment() {
-    //     this.store.dispatch(increment());
-    //     this.count$.subscribe(data => {console.log(data)});
-    //   }
-     
-    //   decrement() {
-    //     this.store.dispatch(decrement());
-    //     console.log(this.count$.subscribe(data => {console.log(data)}));
-    //   }
-     
-    //   reset() {
-    //     this.store.dispatch(reset());
-    //     console.log(this.count$.subscribe(data => {console.log(data)}));
-    //   }
+        this.user$ = this.store.select('user')
+
+    }
+    ngOnInit() {
+
+        this.formData = this.fb.group({
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
+            email: ['', Validators.required],
+            monthly: ['', Validators.required],
+            phone: ['', Validators.required]
+        });
+    }
+    get dataFormControl() {
+        return this.formData.controls;
+    }
+
 
     onSubmit() {
-        typeof this.user$;
-        this.userDataService.postData(this.model);
-        typeof this.user$;
-        this.toastr.success('Form submitted successfully', 'Update!!!');
+        if (this.formData) {
+            this.userDataService.postData(this.formData.value);
+            this.toastr.success('Form submitted successfully', 'Update!!!');
+            console.log(this.formData);
+        } else {
+            this.toastr.error('Form is invalid', 'Invalid');
+            console.log(this.formData);
+        }
+        null;
     }
 }

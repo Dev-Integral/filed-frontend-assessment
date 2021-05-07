@@ -21,6 +21,7 @@ export class UserDataService {
   }
   postData(data: object) {
     this.store.dispatch({type: POST_DATA, payload: data});
+    console.table(data)
   }
   getData() {
     return this.user$
